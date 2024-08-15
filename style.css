@@ -308,3 +308,22 @@ a{
 .vol-i:hover{
     opacity: 1;
 }
+@media (max-width: 768px) {
+    .sidebar {
+     display:none;
+    }
+    .main{
+        flex-direction: column;
+        padding:0;
+    }
+    .main-content {
+      flex:1;
+      padding:1rem;
+    }
+    .music-player {
+        width:100%;
+    }
+    .player-controls {
+      flex-direction: column;
+    }
+}
