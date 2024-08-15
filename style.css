@@ -146,6 +146,53 @@ a{
 .nav-item{
     margin-right: 1rem;
 }
+/* General styling for cards container */
+.cards-container {
+    display: flex; /* Flexbox for horizontal arrangement */
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    overflow-x: auto; /* Horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding: 1rem 0; /* Padding for spacing */
+}
+
+/* Card styling */
+.card {
+    background-color: #232323;
+    width: 150px; /* Fixed width for cards */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-right: 1.5rem; /* Space between cards */
+    margin-top: 1rem;
+    flex: 0 0 auto; /* Prevent shrinking */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .cards-container {
+        /* Keep the horizontal scrolling for mobile */
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto;
+    }
+    
+  /* Hide scrollbar for mobile */
+    .cards-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+   }
+}
+
+/* Media query for desktop devices */
+@media (min-width: 769px) {
+    .cards-container {
+        /* Adjust layout for desktop */
+        flex-wrap: wrap; /* Allow wrapping */
+        overflow-x: hidden; /* Hide horizontal scroll */
+    }
+    
+    .card {
+        margin-right: 1.5rem; /* Space between cards */
+    }
+}
 
 @media (max-width: 768px){
    .hide{
@@ -156,19 +203,7 @@ a{
     top: 0;
    }
 }
-.card{
-    background-color: #232323;
-    width: 150px;
-    border-radius: 0.5rem;
-    padding: 1rem ;
-    margin-left:1.5rem ;
-    margin-top: 1rem;
-}
 
-.cards-container{
-    display: flex;
-    flex-wrap: wrap;
-}
 .card-img{
     width:100%;
     border-radius: 0.5rem;
